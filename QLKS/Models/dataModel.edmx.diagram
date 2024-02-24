@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="add07f59c629415bae912c954096a856" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="dataQLKSModel.tblChucVu" Width="1.5" PointX="3" PointY="13.125" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblDichVu" Width="1.5" PointX="8" PointY="5.625" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblDichVuDaDat" Width="1.5" PointX="9.75" PointY="1.625" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblHoaDon" Width="1.5" PointX="7.5" PointY="1" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblKhachHang" Width="1.5" PointX="3" PointY="6.25" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblLoaiPhong" Width="1.5" PointX="0.75" PointY="7.5" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblNhanVien" Width="1.5" PointX="5.25" PointY="12.5" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblPhieuDatPhong" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblPhong" Width="1.5" PointX="3" PointY="1.375" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblTang" Width="1.5" PointX="0.75" PointY="5.125" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblTinhTrangHoaDon" Width="1.5" PointX="5.25" PointY="6.125" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblTinhTrangPhieuDatPhong" Width="1.5" PointX="3" PointY="9.75" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblTinhTrangPhong" Width="1.5" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="dataQLKSModel.tblTinNhan" Width="1.5" PointX="5.25" PointY="16.375" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_cv" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_dv" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_hd" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_nv" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_pdp" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_tthd" />
+        <AssociationConnector Association="dataQLKSModel.fk_tgd_ma_kh2" />
+        <AssociationConnector Association="dataQLKSModel.fk_tin_nhan" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_lp" />
+        <AssociationConnector Association="dataQLKSModel.fk_tgd_ma_phong_2" />
+        <AssociationConnector Association="dataQLKSModel.fk_tgd_tt_2" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_tang" />
+        <AssociationConnector Association="dataQLKSModel.fk_ma_tt_2" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
