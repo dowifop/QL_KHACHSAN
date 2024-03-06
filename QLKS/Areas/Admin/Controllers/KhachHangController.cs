@@ -76,7 +76,7 @@ namespace QLKS.Areas.Admin.Controllers
                 {
                     db.tblKhachHangs.Add(tblKhachHang);
                     db.SaveChanges();
-                    return RedirectToAction("FindRoom", "Admin");
+                    return RedirectToAction("Index", "KhachHang");
                 }
                 else
                 {
