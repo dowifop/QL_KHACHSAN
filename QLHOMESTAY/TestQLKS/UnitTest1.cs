@@ -59,10 +59,12 @@ namespace TestQLKS
 
             foreach (IXLRow row in worksheet.RowsUsed())
             {
-                if (row.Cell(1).Value.ToString() == testCaseID)
+                // Giả sử cột 'A' chứa ID của test case
+                if (row.Cell("A").Value.ToString() == testCaseID)
                 {
                     isTestCaseFound = true;
-                    row.Cell("F").SetValue(result); // Giả sử cột 'G' là cột Result
+                    // Cập nhật cột 'G' với kết quả, đảm bảo rằng đây là cột đúng trong file của bạn
+                    row.Cell("F").SetValue(result);
                     break;
                 }
             }
@@ -74,6 +76,7 @@ namespace TestQLKS
 
             workbook.Save();
         }
+
 
         [Test]
         public void RegisterWithTestData()
@@ -94,6 +97,7 @@ namespace TestQLKS
                 string sdt = row["sdt"].ToString();
                 string mail = row["mail"].ToString();
                 string expectedErrorMessage = row["ExpectedErrorMessage"].ToString();
+                string errorXPath = row["ErrorXPath"].ToString();
                 try
                 {
                     // Điền thông tin vào form đăng ký
@@ -127,7 +131,7 @@ namespace TestQLKS
                     Thread.Sleep(1000);
 
                     // Kiểm tra xem thông báo lỗi có xuất hiện hay không
-                    var errorElement = wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("field-validation-error text-danger"))); // Cập nhật XPath phù hợp
+                    var errorElement = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(errorXPath)));
                     string actualErrorMessage = errorElement.Text;
                     Assert.That(actualErrorMessage, Is.EqualTo(expectedErrorMessage), $"Test case {testCaseId} failed. Expected error message: {expectedErrorMessage}, but got: {actualErrorMessage}");
                     // Kiểm tra xem thông báo lỗi có đúng với kỳ vọng hay không

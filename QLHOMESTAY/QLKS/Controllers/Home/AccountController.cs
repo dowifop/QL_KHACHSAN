@@ -187,15 +187,26 @@ namespace QLKS.Controllers.Home
         [ValidateAntiForgeryToken]
         public ActionResult CaNhan([Bind(Include = "ma_kh,mat_khau,ho_ten,cmt,sdt,mail,diem")] tblKhachHang tblKhachHang)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(tblKhachHang).State = EntityState.Modified;
-                db.SaveChanges();
-                Session["KH"] = tblKhachHang;
-                return RedirectToAction("Index", "Home");
+                if (ModelState.IsValid)
+                {
+                    db.Entry(tblKhachHang).State = EntityState.Modified;
+                    db.SaveChanges();
+                    Session["KH"] = tblKhachHang;
+                    return RedirectToAction("Index", "Home");
+                }
             }
+            catch (Exception ex)
+            {
+                // Log lỗi hoặc xử lý tùy chỉnh tại đây
+                ModelState.AddModelError("", "Có lỗi xảy ra khi cập nhật thông tin. Vui lòng thử lại.");
+                // Để ghi rõ lỗi vào log, sử dụng ex để truy xuất thông tin lỗi
+            }
+            // Trường hợp xảy ra lỗi, trả về view hiện tại với model để hiển thị lại form với thông tin đã nhập
             return View(tblKhachHang);
         }
+
 
         // GET: KhachHang/Delete/5
         public ActionResult Delete(string id)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9TUsylff9hoA4k7nET+ZV1a0JYTFDTjh7Z2LWbQ6WWGRye69eZ3KtlXyWqcQ+H+9Uwh9zm+AgP3plKXWdfmmFA==",
+  "dgSpecHash": "fkaEqCA/U4HiPDyVpC1SgULFJ9iqIvU/KcIQQdf/YpoqXVmmpoxjiTErAP6PTbyX/nmQt/0rfwCS+LjIKnOdwQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dowif\\Music\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj",
+  "projectFilePath": "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dowif\\.nuget\\packages\\closedxml\\0.102.2\\closedxml.0.102.2.nupkg.sha512",
     "C:\\Users\\dowif\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
