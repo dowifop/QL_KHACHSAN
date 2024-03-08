@@ -40,7 +40,7 @@ namespace QLKS.Models
         public string sdt { get; set; }
 
         [Required(ErrorMessage = "Vui lòng nhập đầy đủ thông tin.")]
-        [EmailAddress(ErrorMessage = "Email không hợp lệ.")]
+        
         [RegularExpression(@".*@gmail\.com$", ErrorMessage = "Email phải kết thúc bằng '@gmail.com'.")]
         public string mail { get; set; }
         public Nullable<int> diem { get; set; }

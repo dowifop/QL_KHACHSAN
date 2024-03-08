@@ -125,23 +125,28 @@ namespace TestQLKS
                     driver.FindElement(By.Id("mail")).Clear();
                     driver.FindElement(By.Id("mail")).SendKeys(mail);
                     Thread.Sleep(1000);
-
                     // Submit form đăng ký
                     driver.FindElement(By.CssSelector("input[type='submit']")).Click();
-                    Thread.Sleep(1000);
 
-                    // Kiểm tra xem thông báo lỗi có xuất hiện hay không
-                    var errorElement = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(errorXPath)));
-                    string actualErrorMessage = errorElement.Text;
-                    Assert.That(actualErrorMessage, Is.EqualTo(expectedErrorMessage), $"Test case {testCaseId} failed. Expected error message: {expectedErrorMessage}, but got: {actualErrorMessage}");
-                    // Kiểm tra xem thông báo lỗi có đúng với kỳ vọng hay không
-                    Assert.That(actualErrorMessage, Is.EqualTo(expectedErrorMessage));
-                 
-                    // Cập nhật kết quả thành công vào file test cases
-                   
-                    UpdateTestResult("C:\\Users\\dowif\\Documents\\DBCLPM\\Testcase.xlsx", testCaseId, "Pass");
+                    // Kiểm tra trường hợp có thông báo lỗi xuất hiện hay không
+                    if (!string.IsNullOrEmpty(expectedErrorMessage))
+                    {
+                        var errorElement = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(errorXPath)));
+                        string actualErrorMessage = errorElement.Text;
+                        Assert.That(actualErrorMessage, Is.EqualTo(expectedErrorMessage), $"Test case {testCaseId} failed. Expected error message: {expectedErrorMessage}, but got: {actualErrorMessage}");
 
+                        // Cập nhật kết quả thành công hoặc thất bại vào file test cases
+                        UpdateTestResult("C:\\Users\\dowif\\Documents\\DBCLPM\\Testcase.xlsx", testCaseId, actualErrorMessage == expectedErrorMessage ? "Pass" : "Failed");
+                    }
+                    else
+                    {
+                        // Trường hợp không có lỗi và chuyển trang dự kiến
+                        wait.Until(ExpectedConditions.UrlContains("http://localhost:49921/")); // Chờ cho đến khi URL trang chủ xuất hiện
+                        Assert.That(driver.Url, Does.Contain("http://localhost:49921/"), "The home page was not reached after registration.");
 
+                        // Cập nhật kết quả thành công vào file test cases
+                        UpdateTestResult("C:\\Users\\dowif\\Documents\\DBCLPM\\Testcase.xlsx", testCaseId, "Pass");
+                    }
                 }
                 catch (Exception ex)
                 {
