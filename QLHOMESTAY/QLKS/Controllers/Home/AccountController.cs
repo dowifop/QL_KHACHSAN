@@ -243,31 +243,35 @@ namespace QLKS.Controllers.Home
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(tblKhachHang objUser)
+        public ActionResult Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var obj = db.tblKhachHangs.Where(a => a.ma_kh.Equals(objUser.ma_kh) && a.mat_khau.Equals(objUser.mat_khau)).FirstOrDefault();
+                
+                var obj = db.tblKhachHangs.Where(a => a.ma_kh.Equals(model.ma_kh) && a.mat_khau.Equals(model.mat_khau)).FirstOrDefault();
                 if (obj != null)
                 {
-                    Session["KH"] = obj;
-                    return RedirectToAction("BookRoom", "Home");
+                    Session["KH"] = obj; 
+                    return RedirectToAction("Index", "Home"); 
                 }
                 else
                 {
-                    ModelState.AddModelError("", "Login data is incorrect!");
+                    ModelState.AddModelError("", "Tên đăng nhập hoặc mật khẩu không đúng.");
                 }
             }
-            return View(objUser);
+            return View(model); 
         }
+
         [HttpGet]
         public ActionResult Login()
         {
-            Session["KH"] = null;
-            tblKhachHang kh = (tblKhachHang)Session["KH"];
-            if (kh != null)
-                return RedirectToAction("BookRoom", "Home");
-            return View();
+            
+            if (Session["KH"] != null)
+            {
+                
+                return RedirectToAction("Index", "Home");
+            }
+            return View(new LoginViewModel()); 
         }
 
         public ActionResult SuaPhieuDatPhong(int? id)
