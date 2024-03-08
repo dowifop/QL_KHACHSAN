@@ -270,9 +270,6 @@ namespace QLKS.Controllers.Home
             return View();
         }
 
-
-
-
         public ActionResult SuaPhieuDatPhong(int? id)
         {
             tblKhachHang kh = new tblKhachHang();

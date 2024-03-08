@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TestQLKS
 {
-    internal class Class1
+    public class InformationTest
     {
+
     }
 }
