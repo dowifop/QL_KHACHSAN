@@ -29,11 +29,11 @@ GO
 
 CREATE TABLE tblKhachHang (
     ma_kh nvarchar(50)  NOT NULL,
-    mat_khau nvarchar(50)  NULL,
-    ho_ten nvarchar(50)  NULL,
-    cmt nvarchar(30)  NULL,
-    sdt nvarchar(15)  NULL,
-    mail nvarchar(100)  NULL,
+    mat_khau nvarchar(50) NOT NULL,
+    ho_ten nvarchar(50) NOT NULL,
+    cmt nvarchar(30) NOT NULL,
+    sdt nvarchar(15) NOT NULL,
+    mail nvarchar(100)NOT NULL,
     diem int  NULL,
 	PRIMARY KEY (ma_kh)
 );
