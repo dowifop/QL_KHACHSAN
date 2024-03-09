@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TestQLKS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf1cc064d511aebeb63bfd752e94f795765ddba6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2005a5653e601f33d4ac39e507acf09c9cea9e77")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestQLKS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestQLKS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

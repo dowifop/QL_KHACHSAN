@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TestQLKS
-build_property.ProjectDir = C:\Users\dowif\Documents\GitHub\QL_KHACHSAN\QLHOMESTAY\TestQLKS\
+build_property.ProjectDir = C:\Users\thong\OneDrive\Máy tính\QL_KHACHSAN\QLHOMESTAY\TestQLKS\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
