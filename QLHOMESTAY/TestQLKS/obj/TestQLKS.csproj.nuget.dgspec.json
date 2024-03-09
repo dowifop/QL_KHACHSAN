@@ -1,14 +1,14 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj": {}
+    "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj": {}
   },
   "projects": {
-    "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj": {
+    "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj",
+        "projectUniqueName": "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj",
         "projectName": "QLKS",
-        "projectPath": "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj",
+        "projectPath": "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj",
         "frameworks": {
           "net48": {
             "projectReferences": {}
@@ -19,20 +19,20 @@
         "net48": {}
       }
     },
-    "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj": {
+    "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj",
+        "projectUniqueName": "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj",
         "projectName": "TestQLKS",
-        "projectPath": "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj",
-        "packagesPath": "C:\\Users\\vuduc\\.nuget\\packages\\",
-        "outputPath": "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\obj\\",
+        "projectPath": "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\TestQLKS.csproj",
+        "packagesPath": "C:\\Users\\dowif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\TestQLKS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\vuduc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dowif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -48,8 +48,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj": {
-                "projectPath": "C:\\BDCLPM\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj"
+              "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj": {
+                "projectPath": "C:\\Users\\dowif\\Documents\\GitHub\\QL_KHACHSAN\\QLHOMESTAY\\QLKS\\QLKS.csproj"
               }
             }
           }
@@ -126,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
